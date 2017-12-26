@@ -19,8 +19,7 @@ class App extends Component {
     fetch('http://localhost:3000')
       .then(resp => resp.json())
       .then(highlight_hash => this.setState({
-        titles: Object.keys(highlight_hash),
-        highlights: highlight_hash["A Random Walk Down Wall Street"]
+        titles: Object.keys(highlight_hash)
       }))
   }
 

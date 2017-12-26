@@ -7,6 +7,8 @@ body {
 table {
   table-layout: fixed;
   width: 100%;
+  border-collapse:separate;
+  border-spacing:1em;
 }
 
 .bookTitles {
@@ -14,3 +16,6 @@ table {
   white-space: nowrap;
   overflow: hidden;
 }
+
+td:hover {background: #99FF99;}
+/*td::selection{color: #ADD8E6;}*/

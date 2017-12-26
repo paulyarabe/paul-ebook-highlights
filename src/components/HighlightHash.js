@@ -9,7 +9,7 @@ const HighlightHash = (props) => {
 
   return(
     <div className="table-responsive col-xs-7">
-      <table className="table-striped">
+      <table className="table-hover">
         <thead>
           <tr>
             <th>Highlights:</th>
