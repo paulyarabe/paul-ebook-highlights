@@ -111,8 +111,8 @@ td:hover {
 
 .header-nightsky .navbar-toggle {
     background-color: transparent !important;
+    border-color: transparent;
     margin-top: 20px;
-    border: 1px solid #fff;
 }
 
 .header-nightsky .navbar-toggle .icon-bar {
