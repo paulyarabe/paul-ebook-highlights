@@ -31,7 +31,7 @@ table {
   border-collapse:separate;
   border-spacing:1em;
   background-color: white;
-  opacity: .70;
+  opacity: .75;
 }
 
 .bookTitles {
@@ -67,7 +67,7 @@ td:hover {
 
 .header-nightsky {
     background-position: bottom;
-    padding-bottom: 7px;
+    padding-bottom: 5px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -92,12 +92,12 @@ td:hover {
 .header-nightsky .navbar-default .navbar-nav>.open>a,
 .header-nightsky .navbar-default .navbar-nav>.open>a:focus,
 .header-nightsky .navbar-default .navbar-nav>.open>a:hover {
-    color: #ccc;
+    color: #a3d9fa;
     background-color: transparent;
 }
 
 .header-nightsky .nav>li>a:hover {
-    color: #ccc;
+    color: #a3d9fa;
     background-color: transparent;
 }
 
@@ -127,7 +127,7 @@ td:hover {
 }
 
 .header-nightsky .navbar-brand:hover {
-    color: #ccc;
+    color: #a3d9fa;
 }
 
 
@@ -142,12 +142,12 @@ td:hover {
 @media screen and (max-width: 767px) {
 
     .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a{
-        color: #fff;
+        color: #a3d9fa;
         font-size: 16px;
     }
 
     .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
-        color: #ccc;
+        color: #a3d9fa;
     }
 
     .header-nightsky .navbar-collapse {

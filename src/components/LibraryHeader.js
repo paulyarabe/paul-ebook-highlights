@@ -15,7 +15,7 @@ const LibraryHeader = () => {
                 </div>
                 <div className="collapse navbar-collapse" id="myNavbar">
                     <ul className="nav navbar-nav navbar-right">
-                        <li><a href="https://paulyarabe.com" target="_blank" rel="noopener noreferrer">MY SITE</a></li>
+                        <li><a href="https://paulyarabe.com" target="_blank" rel="noopener noreferrer">blog</a></li>
                     </ul>
                 </div>
             </div>
