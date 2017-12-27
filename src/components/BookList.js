@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import BookTitle from './BookTitle'
 
-const BookList = (props) => {
 
-  const bookTitles = props.books.map((title, index) => {
-    return <BookTitle key={index}
-                      bookTitle={title}
-                      onTitleSelect={props.onTitleSelect}/>
-  })
+class BookList extends Component {
+
+  render(){
+    const bookTitles = this.props.books.map((title, index) => {
+      return <BookTitle key={index}
+                        bookTitle={title}
+                        onTitleSelect={this.props.onTitleSelect}/>
+    })
 
   return(
     <div className="table-responsive col-xs-5">
@@ -22,7 +24,7 @@ const BookList = (props) => {
         </tbody>
       </table>
     </div>
-  )
+  )}
 }
 
 export default BookList
