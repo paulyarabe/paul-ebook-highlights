@@ -1,7 +1,28 @@
 body {
+  color: black;
+  font-size: 15px;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background: url("ny-library.jpg");
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+}
+
+th {
+  font-size: 25px;
+  font-style: bold;
 }
 
 table {
@@ -9,20 +30,20 @@ table {
   width: 100%;
   border-collapse:separate;
   border-spacing:1em;
+  background-color: white;
+  opacity: .70;
 }
 
 .bookTitles {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+
 }
 
-td:hover {background: #99FF99;}
+td:hover {
+  background: #99FF99;
+  font-size: 18px;
+}
 
 .active {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   background-color: #a3d9fa;
 }
 
@@ -35,11 +56,104 @@ td:hover {background: #99FF99;}
   height:1.5em;
   padding-left: 10px;
   width:20em;
-  font-size:1.2em;
+  font-size:1em;
   color:black;
   background-color: #a3d9fa;
-  border:solid thin grey;
+  /*border:solid thin grey;*/
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.header-nightsky {
+    background-position: bottom;
+    padding-bottom: 7px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-nightsky .navbar-nav>li>a {
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.header-nightsky .navbar {
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom:none;
+    background-color: transparent;
+    min-width: 300px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-nightsky .navbar-default .navbar-nav>.open>a,
+.header-nightsky .navbar-default .navbar-nav>.open>a:focus,
+.header-nightsky .navbar-default .navbar-nav>.open>a:hover {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.header-nightsky .nav>li>a:hover {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.header-nightsky .navbar-nav>li {
+    margin-right: 20px;
+}
+
+.header-nightsky .navbar-nav {
+   margin-top: 12px;
+}
+
+.header-nightsky .navbar-toggle {
+    background-color: transparent !important;
+    margin-top: 20px;
+    border: 1px solid #fff;
+}
+
+.header-nightsky .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.header-nightsky .navbar-brand {
+    color: white;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header-nightsky .navbar-brand:hover {
+    color: #ccc;
+}
+
+
+.header-nightsky .btn-primary:hover {
+    background-color:rgba(255,255,255,0.1);
+}
+
+.header-nightsky .btn-primary:active {
+    transform:translateY(1px);
+}
+
+@media screen and (max-width: 767px) {
+
+    .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+        color: #ccc;
+    }
+
+    .header-nightsky .navbar-collapse {
+        margin-left: 20px;
+        border-top: none;
+        box-shadow: none;
+    }
+
 }

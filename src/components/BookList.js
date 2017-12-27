@@ -12,7 +12,7 @@ class BookList extends Component {
     })
 
   return(
-    <div className="table-responsive col-xs-5">
+    <div className="table-responsive col-xs-4">
       <table className="table-hover">
         <thead>
           <tr>

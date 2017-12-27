@@ -42,7 +42,7 @@ class App extends Component {
               <BookList books={this.state.titles}
                         onTitleSelect={selectedTitle => this.getTitle(selectedTitle)}/>
               <HighlightHash highlights={this.state.highlights} />
-            </div>
+          </div>
         );
     }
 }
