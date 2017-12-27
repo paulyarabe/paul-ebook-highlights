@@ -30,6 +30,7 @@ class App extends Component {
       .then(highlight_hash => this.setState({
         highlights: highlight_hash[selectedTitle]
       }))
+      document.getElementById('floatingTitle').style.visibility = 'visible'
       document.getElementById('floatingTitle').textContent = selectedTitle
     }
 
