@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background: url("ny-library.jpg");
+  background: url("whiteLibrary.jpg");
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
 
@@ -72,7 +72,7 @@ td:hover {
 }
 
 .header-nightsky .navbar-nav>li>a {
-    color: white;
+    color: grey;
     font-size: 25px;
     border-radius: 10px;
 }
@@ -120,7 +120,7 @@ td:hover {
 }
 
 .header-nightsky .navbar-brand {
-    color: white;
+    color: grey;
     font-size: 35px;
     margin-top: 10px;
     margin-bottom: 10px;

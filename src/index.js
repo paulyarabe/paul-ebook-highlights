@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000')
+    fetch('https://hilight-db.herokuapp.com')
       .then(resp => resp.json())
       .then(highlight_hash => this.setState({
         titles: Object.keys(highlight_hash)
@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   getTitle(selectedTitle) {
-    fetch('http://localhost:3000')
+    fetch('https://hilight-db.herokuapp.com')
       .then(resp => resp.json())
       .then(highlight_hash => this.setState({
         highlights: highlight_hash[selectedTitle]
