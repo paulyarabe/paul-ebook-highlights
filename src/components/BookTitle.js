@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-//TODO: put the state in here.  have it pass back title as prop and change the background color for the cell.
+class BookTitle extends Component {
 
-const BookTitle = ({bookTitle, onTitleSelect}) => {
+  handleClick = (e) => {
+    this.props.onTitleSelect(this.props.bookTitle)
+    var list= document.getElementsByClassName("bookTitles");
+      for (var i = 0; i < list.length; i++) {
+        list[i].classList.remove('active');
+      }
+    e.target.classList.add('active')
+  }
 
-  return(
-    <tr>
-      <td className="bookTitles" onClick={() => onTitleSelect(bookTitle)}>
-        { bookTitle }
-      </td>
-    </tr>
-  )
+  render() {
+    return(
+      <tr>
+        <td className= 'bookTitles' onClick={this.handleClick}>
+          { this.props.bookTitle }
+        </td>
+      </tr>
+    )
+  }
 }
-
 export default BookTitle

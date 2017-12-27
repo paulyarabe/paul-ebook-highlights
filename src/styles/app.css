@@ -18,4 +18,10 @@ table {
 }
 
 td:hover {background: #99FF99;}
-/*td::selection{color: #ADD8E6;}*/
+
+.active {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #ADD8E6;
+}
