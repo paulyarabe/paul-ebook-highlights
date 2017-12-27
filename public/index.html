@@ -12,7 +12,49 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <title>React App</title>
+    <script>
+      // -*- coding: utf-8 -*-
+      // 2010-03-10, 2014-04-10
+      // change the position of a “div#floatingTitle” element.
+      // license: GNU GPL version 2.
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var offsetFromTop = 10; // number of pixels of the widget should be from top of the window
+        var updateFrequency= 50; //milisecond. The smaller the value, smooth the animation.
+        var chaseFactor = .30; // the closing-in factor. Smaller makes it smoother.
+
+        var yMoveTo=0;
+        var yDiff=0;
+
+        let movingWidget = document.getElementById("floatingTitle");
+        movingWidget.style.position="absolute";
+        movingWidget.style.zIndex="2";
+        movingWidget.style.top= offsetFromTop.toString() + "px";
+        movingWidget.style.right="20px";
+
+        function ff(){
+            // compute the distance user has scrolled the window
+            yDiff = (navigator.appName === "Microsoft Internet Explorer") ? (yMoveTo - document.documentElement.scrollTop) : (yMoveTo - window.pageYOffset) ;
+
+            if ( Math.abs(yDiff) > 9) {
+
+                // turn off now, prevent the event repeatedly fired when user scroll repeatedly
+                window.removeEventListener("scroll", ff);
+
+                yMoveTo -= yDiff*chaseFactor;
+                movingWidget.style.top  = (yMoveTo+offsetFromTop).toString() + "px" ;
+                setTimeout(ff, updateFrequency); // calls itself again
+            } else {
+                window.addEventListener("scroll", ff , false); // turn back on
+            }
+        }
+
+        window.addEventListener("scroll", ff , false);
+
+      });
+    </script>
+
+    <title>Paul's Library</title>
 
   </head>
   <body>

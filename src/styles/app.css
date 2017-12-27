@@ -23,5 +23,22 @@ td:hover {background: #99FF99;}
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  background-color: #ADD8E6;
+  background-color: #a3d9fa;
+}
+
+#floatingTitle {
+  position:absolute;
+  top:10px;
+  right:20px;
+  z-index:2;
+  height:1.5em;
+  padding-left: 10px;
+  width:20em;
+  font-size:1.2em;
+  color:black;
+  background-color: #a3d9fa;
+  border:solid thin grey;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

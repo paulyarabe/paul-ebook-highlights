@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
 import LibraryHeader from './components/LibraryHeader'
+import FloatingTitle from './components/FloatingTitle'
 import BookList from './components/BookList'
 import HighlightHash from './components/HighlightHash'
 import './styles/app.css'
@@ -29,12 +30,14 @@ class App extends Component {
       .then(highlight_hash => this.setState({
         highlights: highlight_hash[selectedTitle]
       }))
+      document.getElementById('floatingTitle').textContent = selectedTitle
     }
 
     render() {
         return (
             <div>
               <LibraryHeader />
+              <FloatingTitle />
               <BookList books={this.state.titles}
                         onTitleSelect={selectedTitle => this.getTitle(selectedTitle)}/>
               <HighlightHash highlights={this.state.highlights} />
