@@ -160,4 +160,10 @@ td:hover {
         box-shadow: none;
     }
 
+    .bookTitleUrls {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+
 }
