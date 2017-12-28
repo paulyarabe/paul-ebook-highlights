@@ -24,7 +24,7 @@ class App extends Component {
         titles: Object.keys(highlight_hash).sort()
       }))
     .then(() => {
-      fetch('http://localhost:3000/urls')
+      fetch('https://hilight-db.herokuapp.com/urls')
       .then(resp => resp.json())
       .then(urls => this.setState({
         urls: urls
