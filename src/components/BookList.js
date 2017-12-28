@@ -8,6 +8,7 @@ class BookList extends Component {
     const bookTitles = this.props.books.map((title, index) => {
       return <BookTitle key={index}
                         bookTitle={title}
+                        url={this.props.urls[index]}
                         onTitleSelect={this.props.onTitleSelect}/>
     })
 

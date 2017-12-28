@@ -20,6 +20,10 @@ body {
   background-size: cover;
 }
 
+.bookTitleUrls {
+  color: black;
+}
+
 th {
   font-size: 25px;
   font-style: bold;
@@ -40,7 +44,7 @@ table {
 
 td:hover {
   background: #99FF99;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .active {

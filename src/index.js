@@ -12,6 +12,7 @@ class App extends Component {
     super()
     this.state = {
       titles: [],
+      urls: [],
       highlights: [],
     }
   }
@@ -20,11 +21,18 @@ class App extends Component {
     fetch('https://hilight-db.herokuapp.com')
       .then(resp => resp.json())
       .then(highlight_hash => this.setState({
-        titles: Object.keys(highlight_hash)
+        titles: Object.keys(highlight_hash).sort()
       }))
+    .then(() => {
+      fetch('http://localhost:3000/urls')
+      .then(resp => resp.json())
+      .then(urls => this.setState({
+        urls: urls
+      }))
+    })
   }
 
-  getTitle(selectedTitle) {
+  getHighlights(selectedTitle) {
     fetch('https://hilight-db.herokuapp.com')
       .then(resp => resp.json())
       .then(highlight_hash => this.setState({
@@ -40,7 +48,8 @@ class App extends Component {
               <LibraryHeader />
               <FloatingTitle />
               <BookList books={this.state.titles}
-                        onTitleSelect={selectedTitle => this.getTitle(selectedTitle)}/>
+                        onTitleSelect={selectedTitle => this.getHighlights(selectedTitle)}
+                        urls={this.state.urls}/>
               <HighlightHash highlights={this.state.highlights} />
           </div>
         );

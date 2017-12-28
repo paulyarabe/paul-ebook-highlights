@@ -15,7 +15,7 @@ class BookTitle extends Component {
     return(
       <tr>
         <td className= 'bookTitles' onClick={this.handleClick}>
-          { this.props.bookTitle }
+          <a className="bookTitleUrls" href={this.props.url} target="_blank" rel="noopener noreferrer">{ this.props.bookTitle }</a>
         </td>
       </tr>
     )
