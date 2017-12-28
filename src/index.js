@@ -21,7 +21,7 @@ class App extends Component {
     fetch('https://hilight-db.herokuapp.com/titles')
       .then(resp => resp.json())
       .then(titles => this.setState({
-        titles: titles.sort()
+        titles: titles
       }))
     .then(() => {
       fetch('https://hilight-db.herokuapp.com/urls')
