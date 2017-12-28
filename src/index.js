@@ -18,10 +18,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://hilight-db.herokuapp.com')
+    fetch('https://hilight-db.herokuapp.com/titles')
       .then(resp => resp.json())
-      .then(highlight_hash => this.setState({
-        titles: Object.keys(highlight_hash)
+      .then(titles => this.setState({
+        titles: titles.sort()
       }))
     .then(() => {
       fetch('https://hilight-db.herokuapp.com/urls')
