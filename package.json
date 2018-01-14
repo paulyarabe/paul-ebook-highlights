@@ -14,5 +14,5 @@
     "eject": "react-scripts eject",
     "heroku:postbuild": "npm run build"
   },
-  "homepage": "https://py-library.herokuapp.com/"
+  "homepage": "http://py-library.herokuapp.com/"
 }
