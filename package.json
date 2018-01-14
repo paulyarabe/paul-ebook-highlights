@@ -9,11 +9,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run build:clean",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build": "react-scripts build && npm run build:clean",
-    "postinstall": "npm run build:clean",
     "heroku:postbuild": "npm run build"
   },
   "homepage": "https://py-library.herokuapp.com/"
