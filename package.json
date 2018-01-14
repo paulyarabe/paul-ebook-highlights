@@ -12,8 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build",
-    "prebuild": "npm run build:clean"
+    "heroku-postbuild": "npm run build"
   },
   "homepage": "https://py-library.herokuapp.com/"
 }
