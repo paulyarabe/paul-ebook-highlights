@@ -1,3 +1,18 @@
+td .tooltiptext {
+    visibility: hidden;
+    font-size: 14px;
+    width: 50px;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 1s;
+    float: right;
+  }
+
+
 body {
   color: black;
   font-size: 15px;
@@ -46,6 +61,12 @@ td:hover {
   background: #99FF99;
   font-size: 17px;
 }
+
+td:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .active {
   background-color: #a3d9fa;
@@ -132,6 +153,17 @@ td:hover {
 
 .header-nightsky .navbar-brand:hover {
     color: #a3d9fa;
+}
+
+.instructions {
+  margin-right: 20px;
+  font-style: italic;
+}
+
+.instructions:hover {
+  font-size: 19px;
+  background: #99FF99;
+
 }
 
 

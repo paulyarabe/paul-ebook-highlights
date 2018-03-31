@@ -4,12 +4,12 @@ import Highlight from './Highlight'
 const HighlightHash = (props) => {
 
   const highlights = props.highlights.map((highlight, index) => {
-    return <Highlight key={index} highlight={highlight.highlighted_text}/>
+    return <Highlight key={index} highlight={highlight.highlighted_text} id={highlight.id}/>
   })
 
   return(
     <div className="table-responsive col-xs-8">
-      <table className="table-hover">
+      <table>
         <thead>
           <tr>
             <th>Highlights:</th>
