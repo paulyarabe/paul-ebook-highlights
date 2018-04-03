@@ -15,6 +15,47 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <a href="#" class="sf-back-to-top"><span class="arrow"></span>Top</a>
+    <a href="#" class="sf-back-to-actual-top"><span class="arrow"></span>&#8632;</a>
+
+    <script>
+      var amountScrolledforHighlightUpArrow = 3784;
+
+      $(window).scroll(function() {
+          if ( $(window).scrollTop() > amountScrolledforHighlightUpArrow ) {
+              $('a.sf-back-to-top').fadeIn('slow');
+          } else {
+              $('a.sf-back-to-top').fadeOut('slow');
+          }
+      });
+
+      $('a.sf-back-to-top').click(function() {
+          $('html, body').animate({
+              scrollTop: document.getElementById('highlights_table').scrollIntoView({block: 'start',  behavior: 'smooth'})
+          }, 700);
+          return false;
+      });
+
+      var amountScrolled = 600;
+
+      $(window).scroll(function() {
+          if ( $(window).scrollTop() > amountScrolled ) {
+              $('a.sf-back-to-actual-top').fadeIn('slow');
+          } else {
+              $('a.sf-back-to-actual-top').fadeOut('slow');
+          }
+      });
+
+      $('a.sf-back-to-actual-top').click(function() {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 700);
+          return false;
+      });
+    </script>
+
     <script>
       // -*- coding: utf-8 -*-
       // 2010-03-10, 2014-04-10
@@ -22,7 +63,7 @@
       // license: GNU GPL version 2.
 
       document.addEventListener("DOMContentLoaded", function () {
-        var offsetFromTop = 10; // number of pixels of the widget should be from top of the window
+        var offsetFromTop = 5; // number of pixels of the widget should be from top of the window
         var updateFrequency= 50; //milisecond. The smaller the value, smooth the animation.
         var chaseFactor = .30; // the closing-in factor. Smaller makes it smoother.
 

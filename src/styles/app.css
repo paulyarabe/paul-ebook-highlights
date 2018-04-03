@@ -1,3 +1,78 @@
+.sf-back-to-actual-top {
+    background-color: #50A1CB; /* button color */
+    color: white; /* text/arrow color */
+    display: none;
+    z-index: 999;
+    /* float in bottom right corner */
+    /* 20 pixels from edge */
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    /* size of button is 50 pixels*/
+    width: 20px;
+    height: 22px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* round button */
+    -webkit-border-radius: 0%;
+    border-radius: 0%;
+}
+
+/* Style the back-to-top floating button */
+.sf-back-to-top {
+    background-color: #50A1CB; /* button color */
+    color: white; /* text/arrow color */
+    display: none;
+    z-index: 999;
+    /* float in bottom right corner */
+    /* 20 pixels from edge */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    /* size of button is 50 pixels*/
+    width: 50px;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* round button */
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+a.sf-back-to-top {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 2px;
+    padding-top: 4px;
+    text-decoration: none;
+
+}
+
+a.sf-back-to-top .arrow:before {
+    content: "\2934";
+    font-family: 'squarespace-ui-font';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    content: "\2934";
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: -4px;
+    text-decoration: none;
+
+}
+
 td .tooltiptext {
     visibility: hidden;
     font-size: 14px;
@@ -78,10 +153,10 @@ td:hover .tooltiptext {
   top:10px;
   right:20px;
   z-index:2;
-  height:1.5em;
+  height:1.3em;
   padding-left: 10px;
   width:20em;
-  font-size:1em;
+  font-size:.9em;
   color:black;
   background-color: #a3d9fa;
   /*border:solid thin grey;*/

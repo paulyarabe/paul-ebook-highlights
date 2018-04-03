@@ -8,7 +8,8 @@ class BookTitle extends Component {
       for (var i = 0; i < list.length; i++) {
         list[i].classList.remove('active');
       }
-    e.target.classList.add('active')
+    e.target.classList.add('active');
+    document.getElementById('highlights_table').scrollIntoView({block: 'start',  behavior: 'smooth'});
   }
 
   render() {
