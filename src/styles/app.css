@@ -1,3 +1,6 @@
+html { -webkit-text-size-adjust: none; }
+
+
 .sf-back-to-actual-top {
     background-color: #50A1CB; /* button color */
     color: white; /* text/arrow color */
